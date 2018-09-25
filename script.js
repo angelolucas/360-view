@@ -8,23 +8,22 @@ var rotation = {
 
 objectContainer.onmousedown = function(e) {
   var dragging = true
-  var prevX = e.pageX
-  var prevY = e.pageY
+  var prevXRotation = e.pageX
+  var prevYRotation = e.pageY
 
   objectContainer.onmousemove = function(e) {
     if (!dragging) return false
 
-    var x = reversePolarity(e.pageX - prevX)
-    var y = reversePolarity(e.pageY - prevY)
+    var xRotation = reversePolarity(e.pageX - prevXRotation)
+    var yRotation = reversePolarity(e.pageY - prevYRotation)
 
-    prevX = e.pageX
-    prevY = e.pageY
+    prevXRotation = e.pageX
+    prevYRotation = e.pageY
 
-    rotation.x += (y / 10) * speed
-    rotation.z += (x / 10) * speed
+    rotation.x += (yRotation / 10) * speed
+    rotation.z += (xRotation / 10) * speed
 
-    object.style.transform =
-      'rotateX(' + rotation.x + 'deg) rotateZ(' + rotation.z + 'deg)'
+    applyRotatiton()
   }
 
   objectContainer.onmouseup = function(e) {
@@ -32,9 +31,16 @@ objectContainer.onmousedown = function(e) {
   }
 }
 
-reversePolarity = function(value) {
+var reversePolarity = function(value) {
   return value - value * 2
 }
+
+var applyRotatiton = function() {
+  object.style.transform =
+    'rotateX(' + rotation.x + 'deg) rotateZ(' + rotation.z + 'deg)'
+}
+
+document.onload = applyRotatiton()
 
 document.querySelector('.magic-button').onclick = function() {
   document.querySelector('.cubemap').classList.toggle('magic')

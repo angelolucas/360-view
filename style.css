@@ -30,7 +30,6 @@ body {
 }
 
 .rotate {
-  transform: rotateX(45deg) rotateZ(225deg);
   width: 100%;
   height: 100%;
 }
