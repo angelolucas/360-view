@@ -64,9 +64,21 @@ body {
   position: absolute;
   width: 400px;
   height: 400px;
-  transform: translateX(99.99%) rotateY(-90deg);
   transform-origin: left;
   backface-visibility: hidden;
+  transform: translateX(99.9%) rotateY(-90deg);
+}
+
+.cubemap .ceiling {
+  background-position: 33.33% 0%;
+  transform-origin: bottom;
+  transform: translateY(-99.9%) rotateX(-90deg);
+}
+
+.cubemap .floor {
+  background-position: 33.33% 100%;
+  transform-origin: top;
+  transform: translateY(99.9%) rotateX(90deg);
 }
 
 .cubemap .wall1 {
@@ -84,18 +96,6 @@ body {
 
 .cubemap .wall4 {
   background-position: 99.99% 50%;
-}
-
-.cubemap .ceiling {
-  background-position: 33.33% 0%;
-  transform: translateY(-99.9%) rotateX(-90deg);
-  transform-origin: bottom;
-}
-
-.cubemap .floor {
-  background-position: 33.33% 100%;
-  transform: translateY(99.99%) rotateX(90deg);
-  transform-origin: top;
 }
 
 .magic {
