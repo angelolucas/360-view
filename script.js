@@ -59,12 +59,12 @@ $(document).ready(function() {
   })
 
   $('.magic-button').click(function() {
-    $('.background').toggleClass('magic')
+    $('.cubemap').toggleClass('magic')
   })
 
   $(document).keypress(function(event) {
     if (event.originalEvent.key === 'm') {
-      $('.background').toggleClass('magic')
+      $('.cubemap').toggleClass('magic')
     }
   })
 })
