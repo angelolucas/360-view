@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  cursor: -webkit-grab;
+}
+
+body:active {
+  cursor: -webkit-grabbing;
+}
+
+.platform-3d {
+  position: relative;
+  perspective: 800px;
+  width: 100vw;
+  height: 100vh;
+  min-width: 300px;
+  min-height: 300px;
+  display: flex;
+  overflow: hidden;
+}
+.platform-3d * {
+  transform-style: preserve-3d;
+}
+
+.platform-3d__rotate {
+  will-change: transform;
+  transform: rotateX(45deg) rotateZ(225deg);
+  width: 0;
+  height: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.axis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 4vw;
+  border-left-width: 2px;
+  border-left-style: solid;
+  pointer-events: none;
+  transform-origin: top;
+}
+
+.axis:after {
+  content: '';
+  position: absolute;
+  border-left-width: 2px;
+  border-left-style: solid;
+  opacity: 0.15;
+  height: 100%;
+  width: 0;
+  bottom: 100%;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.axis--perpendicular {
+  transform: translateX(-100%) rotateY(90deg);
+}
+
+.axis--x {
+  transform: rotateZ(-90deg);
+  border-color: red;
+}
+
+.axis--x,
+.axis--x:after,
+.axis--x .axis--perpendicular,
+.axis--x .axis--perpendicular:after {
+  border-color: red;
+}
+
+.axis--y,
+.axis--y:after,
+.axis--y .axis--perpendicular,
+.axis--y .axis--perpendicular:after {
+  border-color: green;
+}
+
+.axis--z {
+  transform: rotateX(90deg);
+}
+
+.axis--z,
+.axis--z:after,
+.axis--z .axis--perpendicular,
+.axis--z .axis--perpendicular:after {
+  border-color: blue;
+}
+
+.background {
+  transition: 1s transform;
+  transform: translate3d(-50%, -50%, -200px) rotateX(-90deg)
+    scale3d(100, 100, 100);
+  transform-origin: center center 200px;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.background.magic {
+  transform: translate3d(-50%, -50%, -200px) rotateX(-90deg) scale3d(1, 1, 1);
+}
+
+.background.magic .bg {
+  box-shadow: inset 0 0 1px 1px black;
+}
+
+.bg {
+  transition: 1s box-shadow;
+  background: url('https://i.pinimg.com/originals/3a/24/14/3a24142dce7b271799b6501fabc4ee19.jpg');
+  background-repeat: no-repeat;
+  background-size: 400% 300%;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  transform: translateX(99.9%) rotateY(-90deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+}
+
+.bg--side1 {
+  transform: translateX(0%);
+  background-position: 0% 50%;
+}
+
+.bg--side2 {
+  background-position: 33.33% 50%;
+}
+
+.bg--side3 {
+  background-position: 66.66% 50%;
+}
+
+.bg--side4 {
+  background-position: 99.9% 50%;
+}
+
+.bg--top {
+  background-position: 33.33% 0%;
+  transform: translateY(-99.9%) rotateX(-90deg);
+  transform-origin: bottom;
+}
+
+.bg--bottom {
+  background-position: 33.33% 100%;
+  transform: translateY(99.9%) rotateX(90deg);
+  transform-origin: top;
+}
+
+.magic {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  font: 12px arial, sans-serif;
+}
+.magic-button {
+  padding: 5px 10px;
+  background: #111;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.magic-button:hover {
+  background: white;
+  color: black;
+}
