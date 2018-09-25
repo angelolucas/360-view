@@ -1,0 +1,57 @@
+.axes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.axis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 150px;
+  transform-origin: top center;
+}
+
+.main-axis.red-axis {
+  transform: rotateZ(90deg) rotateX(180deg) translateY(-50%);
+}
+
+.main-axis.green-axis {
+  transform: rotateY(-90deg) translateY(-50%);
+}
+
+.main-axis.blue-axis {
+  transform: rotateX(90deg) translateY(-50%);
+}
+
+.red-axis {
+  background-image: linear-gradient(
+    transparent,
+    #ff000033 50%,
+    #ff0000 50%,
+    transparent
+  );
+}
+
+.green-axis {
+  background-image: linear-gradient(
+    transparent,
+    #00ff0033 50%,
+    #00ff00 50%,
+    transparent
+  );
+}
+
+.blue-axis {
+  background-image: linear-gradient(
+    transparent,
+    #0000ff33 50%,
+    #0000ff 50%,
+    transparent
+  );
+}
+
+.perpendicular-axis {
+  transform: rotateY(90deg);
+}
