@@ -28,8 +28,8 @@
 .red-axis {
   background-image: linear-gradient(
     transparent,
-    #ff000033 50%,
-    #ff0000 50%,
+    rgba(255, 0, 0, 0.1) 50%,
+    red 50%,
     transparent
   );
 }
@@ -37,8 +37,8 @@
 .green-axis {
   background-image: linear-gradient(
     transparent,
-    #00ff0033 50%,
-    #00ff00 50%,
+    rgba(0, 255, 0, 0.1) 50%,
+    green 50%,
     transparent
   );
 }
@@ -46,8 +46,8 @@
 .blue-axis {
   background-image: linear-gradient(
     transparent,
-    #0000ff33 50%,
-    #0000ff 50%,
+    rgba(0, 0, 255, 0.1) 50%,
+    blue 50%,
     transparent
   );
 }

@@ -1,3 +1,10 @@
+html,
+body,
+.app {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background: black;
   margin: 0;
@@ -6,8 +13,6 @@ body {
 .app {
   position: relative;
   perspective: 800px;
-  width: 100vw;
-  height: 100vh;
   min-width: 300px;
   min-height: 300px;
   display: flex;
