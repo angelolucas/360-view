@@ -1,45 +1,27 @@
-/*
-JS used for camera rotation
-*/
-
 var objectContainer = document.querySelector('.rotate-container')
 var object = document.querySelector('.rotate')
+var speed = 3
 var rotation = {
   x: 45,
   z: 225,
 }
-var prevValues = {
-  x: 90,
-  y: 45,
-}
-var rotationActive = false
 
 objectContainer.onmousedown = function(e) {
   var dragging = true
-  var startX = e.pageX
-  var startY = e.pageY
+  var prevX = e.pageX
+  var prevY = e.pageY
 
   objectContainer.onmousemove = function(e) {
     if (!dragging) return false
 
-    var deltaX
-    var deltaY
-    if (!rotationActive) {
-      deltaX = startX - e.pageX
-      deltaY = startY - e.pageY
-      rotationActive = true
-    } else {
-      deltaX = prevValues.x - e.pageX
-      deltaY = prevValues.y - e.pageY
-    }
-    prevValues.x = e.pageX
-    prevValues.y = e.pageY
+    var x = reversePolarity(e.pageX - prevX)
+    var y = reversePolarity(e.pageY - prevY)
 
-    var degX = (deltaX * 100) / 360
-    var degY = (deltaY * 100) / 360
+    prevX = e.pageX
+    prevY = e.pageY
 
-    rotation.x += degY
-    rotation.z += degX
+    rotation.x += (y / 10) * speed
+    rotation.z += (x / 10) * speed
 
     object.style.transform =
       'rotateX(' + rotation.x + 'deg) rotateZ(' + rotation.z + 'deg)'
@@ -47,10 +29,11 @@ objectContainer.onmousedown = function(e) {
 
   objectContainer.onmouseup = function(e) {
     dragging = false
-    rotationActive = false
-    prevValues.x = 0
-    prevValues.y = 0
   }
+}
+
+reversePolarity = function(value) {
+  return value - value * 2
 }
 
 document.querySelector('.magic-button').onclick = function() {
