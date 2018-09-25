@@ -4,7 +4,7 @@ JS used for camera rotation
 $(document).ready(function() {
   var winW = $(window).width()
   var winH = $(window).height()
-  var $demo = $('.platform-3d__rotate')
+  var $demo = $('.rotation')
   var rotation = {
     x: 45,
     z: 225,

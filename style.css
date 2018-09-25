@@ -29,7 +29,7 @@ body:active {
   transform-style: preserve-3d;
 }
 
-.platform-3d__rotate {
+.rotation {
   will-change: transform;
   transform: rotateX(45deg) rotateZ(225deg);
   width: 0;
