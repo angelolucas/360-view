@@ -1,0 +1,34 @@
+body {
+  background: black;
+  margin: 0;
+}
+
+.app {
+  position: relative;
+  perspective: 800px;
+  width: 100vw;
+  height: 100vh;
+  min-width: 300px;
+  min-height: 300px;
+  display: flex;
+  overflow: hidden;
+}
+
+.app * {
+  transform-style: preserve-3d;
+}
+
+.rotate-container {
+  cursor: -webkit-grab;
+  width: 100%;
+  height: 100%;
+}
+
+.rotate-container:active {
+  cursor: -webkit-grabbing;
+}
+
+.rotate {
+  width: 100%;
+  height: 100%;
+}
