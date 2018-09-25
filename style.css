@@ -15,7 +15,7 @@ body:active {
   cursor: -webkit-grabbing;
 }
 
-.platform-3d {
+.app {
   position: relative;
   perspective: 800px;
   width: 100vw;
@@ -25,7 +25,7 @@ body:active {
   display: flex;
   overflow: hidden;
 }
-.platform-3d * {
+.app * {
   transform-style: preserve-3d;
 }
 
