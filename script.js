@@ -4,7 +4,8 @@ JS used for camera rotation
 $(document).ready(function() {
   var winW = $(window).width()
   var winH = $(window).height()
-  var $demo = $('.rotation')
+  var objectContainer = $('.rotate-container')
+  var object = $('.rotate')
   var rotation = {
     x: 45,
     z: 225,
@@ -16,14 +17,14 @@ $(document).ready(function() {
   var rotationActive = false
   var startAnimTime = 5400
   var timeout = setTimeout(function() {
-    $demo.addClass('ready')
+    objectContainer.addClass('ready')
   }, 4400)
 
-  $(document).on('mousedown', function(e) {
+  objectContainer.on('mousedown', function(e) {
     var startX = e.pageX
     var startY = e.pageY
 
-    $(document).on('mousemove', function(e) {
+    objectContainer.on('mousemove', function(e) {
       var deltaX
       var deltaY
       if (!rotationActive) {
@@ -43,15 +44,15 @@ $(document).ready(function() {
       rotation.x += degY
       rotation.z += degX
 
-      $demo.css(
+      object.css(
         'transform',
         'rotateX(' + rotation.x + 'deg) rotateZ(' + rotation.z + 'deg)'
       )
     })
 
-    $(document).on('mouseup', function(e) {
-      $(document).off('mousemove')
-      $(document).off('mouseup')
+    objectContainer.on('mouseup', function(e) {
+      objectContainer.off('mousemove')
+      objectContainer.off('mouseup')
       rotationActive = false
       prevValues.x = 0
       prevValues.y = 0
