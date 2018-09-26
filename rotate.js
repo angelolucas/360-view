@@ -32,15 +32,13 @@ objectContainer.onmousedown = function(e) {
 }
 
 // Apply rotation by device orientation
-window.addEventListener('deviceorientation', handleOrientation)
-
-function handleOrientation(e) {
+window.addEventListener('deviceorientation', function(e) {
   rotation.x = e.beta
   rotation.y = -e.gamma
   rotation.z = e.alpha
 
   applyRotatiton()
-}
+})
 
 var applyRotatiton = function() {
   object.style.transform =
