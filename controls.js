@@ -1,9 +1,21 @@
-document.querySelector('.magic-button').onclick = function() {
-  document.querySelector('.cubemap').classList.toggle('magic')
+var select = {
+  cubemap: document.querySelector('.cubemap'),
+
+  input: {
+    showGrid: document.querySelector('.input-show-grid'),
+    zoomOut: document.querySelector('.input-zoom-out'),
+    cubeBorder: document.querySelector('.input-cube-border'),
+  },
 }
 
-document.onkeypress = function(event) {
-  if (event.key === 'm') {
-    document.querySelector('.cubemap').classList.toggle('magic')
-  }
+select.input.showGrid.onchange = function() {
+  select.cubemap.classList.toggle('show-grid')
+}
+
+select.input.zoomOut.onchange = function() {
+  select.cubemap.classList.toggle('zoom-out')
+}
+
+select.input.cubeBorder.onchange = function() {
+  select.cubemap.classList.toggle('cube-border')
 }

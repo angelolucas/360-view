@@ -20,8 +20,8 @@ objectContainer.onmousedown = function(e) {
     prevXRotation = e.pageX
     prevYRotation = e.pageY
 
-    rotation.x += yRotation / 15
-    rotation.z += xRotation / 15
+    rotation.x += yRotation / 13
+    rotation.z += xRotation / 13
 
     applyRotatiton()
   }

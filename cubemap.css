@@ -11,21 +11,16 @@
   left: 50%;
 }
 
-.cubemap * {
-  transform-style: preserve-3d;
-}
-
-.cubemap.magic {
+.cubemap.zoom-out {
   transform: translate3d(-50%, -50%, -200px) rotateX(-90deg) scale3d(1, 1, 1);
 }
 
-.cubemap.magic .cubeside {
+.cubemap.cube-border .cubeside {
   box-shadow: inset 0 0 1px 1px black;
 }
 
 .cubeside {
-  transition: 1s box-shadow;
-  background: url('https://i.pinimg.com/originals/3a/24/14/3a24142dce7b271799b6501fabc4ee19.jpg');
+  background-image: url('image.jpg');
   background-repeat: no-repeat;
   background-size: 400% 300%;
   position: absolute;
@@ -33,7 +28,13 @@
   height: 400px;
   transform-origin: left;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform: translateX(99.9%) rotateY(-90deg);
+}
+
+.cubemap.show-grid .cubeside {
+  background-image: url('grid.jpg'), url('image.jpg');
+  background-blend-mode: lighten;
 }
 
 .cubemap .ceiling {
@@ -63,28 +64,4 @@
 
 .cubemap .wall4 {
   background-position: 99.99% 50%;
-}
-
-.magic-info {
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  color: white;
-  font: 12px arial, sans-serif;
-}
-
-.magic-button {
-  padding: 5px 10px;
-  background: #111;
-  color: white;
-  border: 0;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.magic-button:hover {
-  background: white;
-  color: black;
 }
