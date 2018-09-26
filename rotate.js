@@ -1,6 +1,5 @@
 var objectContainer = document.querySelector('.rotate-container')
 var object = document.querySelector('.rotate')
-var speed = 3
 var rotation = {
   x: 45,
   y: 0,
@@ -15,14 +14,14 @@ objectContainer.onmousedown = function(e) {
   objectContainer.onmousemove = function(e) {
     if (!dragging) return false
 
-    var xRotation = reversePolarity(e.pageX - prevXRotation)
-    var yRotation = reversePolarity(e.pageY - prevYRotation)
+    var xRotation = e.pageX - prevXRotation
+    var yRotation = e.pageY - prevYRotation
 
     prevXRotation = e.pageX
     prevYRotation = e.pageY
 
-    rotation.x += (yRotation / 10) * speed
-    rotation.z += (xRotation / 10) * speed
+    rotation.x += yRotation / 15
+    rotation.z += xRotation / 15
 
     applyRotatiton()
   }
@@ -30,10 +29,6 @@ objectContainer.onmousedown = function(e) {
   objectContainer.onmouseup = function(e) {
     dragging = false
   }
-}
-
-var reversePolarity = function(value) {
-  return value - value * 2
 }
 
 // Apply rotation by device orientation
