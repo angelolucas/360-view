@@ -3,6 +3,7 @@ var object = document.querySelector('.rotate')
 var speed = 3
 var rotation = {
   x: 45,
+  y: 0,
   z: 225,
 }
 
@@ -35,9 +36,26 @@ var reversePolarity = function(value) {
   return value - value * 2
 }
 
+// Apply rotation by device orientation
+window.addEventListener('deviceorientation', handleOrientation)
+
+function handleOrientation(e) {
+  rotation.x = e.beta
+  rotation.y = -e.gamma
+  rotation.z = e.alpha
+
+  applyRotatiton()
+}
+
 var applyRotatiton = function() {
   object.style.transform =
-    'rotateX(' + rotation.x + 'deg) rotateZ(' + rotation.z + 'deg)'
+    'rotateY(' +
+    rotation.y +
+    'deg) rotateX(' +
+    rotation.x +
+    'deg) rotateZ(' +
+    rotation.z +
+    'deg)'
 }
 
 document.onload = applyRotatiton()
