@@ -7,6 +7,7 @@ body,
 
 body {
   background: black;
+  color: white;
   margin: 0;
 }
 
@@ -41,21 +42,35 @@ body {
 
 /* Controls */
 .controls {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
   position: absolute;
-  bottom: 5px;
   left: 5px;
-  color: white;
+  right: 5px;
+  bottom: 5px;
+}
+
+.controls > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 2px;
   font: 12px arial, sans-serif;
   user-select: none;
 }
 
 .controls label {
+  display: inline-block;
   margin-right: 10px;
 }
 
 .controls label:last-child {
   margin-right: 0;
+}
+
+.github-link {
+  text-align: right;
+}
+.github-link a {
+  text-decoration: none;
+  color: white;
 }
