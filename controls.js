@@ -1,5 +1,5 @@
 var select = {
-  cubemap: document.querySelector('.cubemap'),
+  cubemap: document.querySelector('.cubemap-container'),
 
   input: {
     showGrid: document.querySelector('.input-show-grid'),
