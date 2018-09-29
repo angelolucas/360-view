@@ -25,7 +25,7 @@
 }
 
 .cubeside {
-  background-image: url('image.jpg');
+  background-image: url('../images/environment.jpg');
   background-repeat: no-repeat;
   background-size: 400% 300%;
   position: absolute;
@@ -38,7 +38,7 @@
 }
 
 .cubemap-container.show-grid .cubeside {
-  background-image: url('grid.jpg'), url('image.jpg');
+  background-image: url('../images/grid.jpg'), url('../images/environment.jpg');
   background-blend-mode: lighten;
 }
 
