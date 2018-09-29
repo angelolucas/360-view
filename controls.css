@@ -1,0 +1,88 @@
+.controls {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  height: 30px;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  color: white;
+  font: 12px arial, sans-serif;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 350px;
+  margin: auto;
+}
+
+.controls .zoom button {
+  background: white;
+  padding: 1px 2px 6px 2px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+  outline: none;
+}
+
+.controls label:last-child {
+  margin-right: 0;
+}
+
+.controls switch {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+}
+
+.controls .value {
+  font-size: 12px;
+  vertical-align: bottom;
+  line-height: 30px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.controls .switch input {
+  display: none;
+}
+
+.controls .slider {
+  display: inline-block;
+  width: 46px;
+  height: 26px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.controls .slider:before {
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.controls input:checked + .slider {
+  background-color: white;
+}
+
+.controls input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.controls input:checked + .slider:before {
+  background-color: black;
+  transform: translateX(100%);
+}

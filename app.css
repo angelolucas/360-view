@@ -38,24 +38,3 @@ body {
   width: 100%;
   height: 100%;
 }
-
-/* Controls */
-.controls {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  border-radius: 2px;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  color: white;
-  font: 12px arial, sans-serif;
-  user-select: none;
-}
-
-.controls label {
-  margin-right: 10px;
-}
-
-.controls label:last-child {
-  margin-right: 0;
-}
