@@ -1,6 +1,6 @@
 /* Cubemap */
 .cubemap-container {
-  transition: 1s transform;
+  transition: 0.4s transform;
   transform: scale3d(100, 100, 100);
   position: absolute;
   top: 50%;

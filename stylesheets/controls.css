@@ -17,6 +17,7 @@
 }
 
 .controls .zoom button {
+  transition: 0.4s;
   background: white;
   padding: 1px 2px 6px 2px;
   width: 30px;
@@ -27,8 +28,13 @@
   font-weight: bold;
   margin-right: 5px;
   outline: none;
+  cursor: pointer;
 }
-
+.controls .zoom button[disabled] {
+  background: transparent;
+  color: white;
+  cursor: default;
+}
 .controls label:last-child {
   margin-right: 0;
 }
@@ -39,10 +45,10 @@
   font-size: 0;
 }
 
-.controls .value {
+.controls .label {
   font-size: 12px;
   vertical-align: bottom;
-  line-height: 30px;
+  line-height: 33px;
   margin-right: 10px;
   text-transform: uppercase;
   font-weight: bold;
@@ -69,7 +75,6 @@
   width: 20px;
   margin: 3px;
   background-color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
 }
