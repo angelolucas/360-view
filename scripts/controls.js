@@ -1,6 +1,5 @@
 var select = {
   cubemap: document.querySelector('.cubemap-container'),
-
   input: {
     showGrid: document.querySelector('.input-show-grid'),
     cubeBorder: document.querySelector('.input-cube-border'),
@@ -9,7 +8,7 @@ var select = {
   },
 }
 var zoomSteps = [0.75, 1, 1.5, 2, 3, 5, 10, 50]
-var currentZoom = 7
+var currentZoom = zoomSteps.length - 1
 
 select.input.showGrid.onchange = function() {
   select.cubemap.classList.toggle('show-grid')
@@ -20,30 +19,28 @@ select.input.cubeBorder.onchange = function() {
 }
 
 select.input.zoomIn.onclick = function() {
-  if (currentZoom < zoomSteps.length - 1) {
-    currentZoom++
+  var lastStap = currentZoom === zoomSteps.length - 1
 
+  if (!lastStap) {
+    currentZoom++
     applyZoom()
   }
 }
 
 select.input.zoomOut.onclick = function() {
-  if (currentZoom > 0) {
-    currentZoom--
+  var lastStep = currentZoom === 0
 
+  if (!lastStep) {
+    currentZoom--
     applyZoom()
   }
 }
 
 var applyZoom = function() {
+  var scale = zoomSteps[currentZoom]
+
   select.cubemap.style.transform =
-    'scale3d(' +
-    zoomSteps[currentZoom] +
-    ',' +
-    zoomSteps[currentZoom] +
-    ',' +
-    zoomSteps[currentZoom] +
-    ')'
+    'scale3d(' + scale + ',' + scale + ',' + scale + ')'
 }
 
 document.onload = applyZoom()
