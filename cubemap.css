@@ -42,31 +42,31 @@
   background-blend-mode: lighten;
 }
 
-.cubemap .ceiling {
+.cubemap .top {
   background-position: 33.33% 0%;
   transform-origin: bottom;
   transform: translateY(-99.9%) rotateX(-90deg);
 }
 
-.cubemap .floor {
+.cubemap .bottom {
   background-position: 33.33% 100%;
   transform-origin: top;
   transform: translateY(99.9%) rotateX(90deg);
 }
 
-.cubemap .wall1 {
+.cubemap .front {
   transform: translateX(0%);
   background-position: 0% 50%;
 }
 
-.cubemap .wall2 {
+.cubemap .left {
   background-position: 33.33% 50%;
 }
 
-.cubemap .wall3 {
+.cubemap .back {
   background-position: 66.66% 50%;
 }
 
-.cubemap .wall4 {
+.cubemap .right {
   background-position: 99.99% 50%;
 }
