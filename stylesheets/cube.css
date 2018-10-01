@@ -1,11 +1,4 @@
-.cubemap-container {
-  transition: 0.4s transform;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.cubemap {
+.cube {
   transform: translate3d(-50%, -100%, 0) rotateX(-90deg);
   width: 400px;
   height: 400px;
@@ -14,11 +7,11 @@
   left: 50%;
 }
 
-.cubemap-container.show-border .cubeside {
+.cube.show-border .side {
   box-shadow: inset 0 0 0px 1px black;
 }
 
-.cubeside {
+.side {
   background-image: url('../images/environment.jpg');
   background-repeat: no-repeat;
   background-size: 400% 300%;
@@ -31,36 +24,36 @@
   transform: translateX(99.9%) rotateY(-90deg);
 }
 
-.cubemap-container.show-grid .cubeside {
+.cube.show-grid .side {
   background-image: url('../images/grid.jpg'), url('../images/environment.jpg');
   background-blend-mode: lighten;
 }
 
-.cubemap .top {
+.cube .top {
   background-position: 33.33% 0%;
   transform-origin: bottom;
   transform: translateY(-99.9%) rotateX(-90deg);
 }
 
-.cubemap .bottom {
+.cube .bottom {
   background-position: 33.33% 100%;
   transform-origin: top;
   transform: translateY(99.9%) rotateX(90deg);
 }
 
-.cubemap .front {
+.cube .front {
   transform: translateX(0%);
   background-position: 0% 50%;
 }
 
-.cubemap .left {
+.cube .left {
   background-position: 33.33% 50%;
 }
 
-.cubemap .back {
+.cube .back {
   background-position: 66.66% 50%;
 }
 
-.cubemap .right {
+.cube .right {
   background-position: 99.99% 50%;
 }

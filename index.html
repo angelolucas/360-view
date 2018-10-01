@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="stylesheets/app.css" />
-  <link rel="stylesheet" href="stylesheets/cubemap.css" />
+  <link rel="stylesheet" href="stylesheets/cube.css" />
   <link rel="stylesheet" href="stylesheets/axes.css" />
   <link rel="stylesheet" href="stylesheets/controls.css" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -14,16 +14,13 @@
   <div class="perspective dragging-area">
     <div class="camera">
       <div class="rotate">
-        <!-- Cubemap -->
-        <div class="cubemap-container">
-          <div class="cubemap">
-            <div class="cubeside front">
-              <div class="cubeside left">
-                <div class="cubeside top"></div>
-                <div class="cubeside bottom"></div>
-                <div class="cubeside back">
-                  <div class="cubeside right">
-                  </div>
+        <div class="cube">
+          <div class="side front">
+            <div class="side left">
+              <div class="side top"></div>
+              <div class="side bottom"></div>
+              <div class="side back">
+                <div class="side right">
                 </div>
               </div>
             </div>
@@ -31,7 +28,6 @@
         </div>
       </div>
     </div>
-    <!-- Axes -->
     <div class="axes">
       <div class="axis main-axis red-axis">
         <div class="axis perpendicular-axis red-axis"></div>
@@ -44,7 +40,6 @@
       </div>
     </div>
   </div>
-  <!-- Controls -->
   <div class="controls">
     <div class="zoom">
       <input class="input-zoom" type="range" min="-800" max="800" value="800">

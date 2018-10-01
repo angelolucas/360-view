@@ -1,5 +1,5 @@
 var select = {
-  cubemap: document.querySelector('.cubemap-container'),
+  cube: document.querySelector('.cube'),
   camera: document.querySelector('.camera'),
   input: {
     showGrid: document.querySelector('.input-show-grid'),
@@ -15,10 +15,10 @@ select.input.zoom.oninput = function() {
 
 // Toggle Show Grid
 select.input.showGrid.onclick = function() {
-  select.cubemap.classList.toggle('show-grid')
+  select.cube.classList.toggle('show-grid')
 }
 
 // Toogle Cube Borders
 select.input.showBorders.onclick = function() {
-  select.cubemap.classList.toggle('show-border')
+  select.cube.classList.toggle('show-border')
 }
