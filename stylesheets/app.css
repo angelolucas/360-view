@@ -23,8 +23,8 @@ body {
   transform-style: preserve-3d;
 }
 
-/* Rotate */
-.rotate-container {
+.camera {
+  transform: translateZ(800px);
   cursor: -webkit-grab;
   width: 100%;
   height: 100%;

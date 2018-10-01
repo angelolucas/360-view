@@ -12,7 +12,7 @@
 
 <body>
   <div class="app">
-    <div class="rotate-container">
+    <div class="camera">
       <div class="rotate">
         <!-- Cubemap -->
         <div class="cubemap-container">
@@ -29,39 +29,28 @@
             </div>
           </div>
         </div>
-
-        <!-- Axes -->
-        <div class="axes">
-          <div class="axis main-axis red-axis">
-            <div class="axis perpendicular-axis red-axis"></div>
-          </div>
-          <div class="axis main-axis green-axis">
-            <div class="axis perpendicular-axis green-axis"></div>
-          </div>
-          <div class="axis main-axis blue-axis">
-            <div class="axis perpendicular-axis blue-axis"></div>
-          </div>
-        </div>
+      </div>
+    </div>
+    <!-- Axes -->
+    <div class="axes">
+      <div class="axis main-axis red-axis">
+        <div class="axis perpendicular-axis red-axis"></div>
+      </div>
+      <div class="axis main-axis green-axis">
+        <div class="axis perpendicular-axis green-axis"></div>
+      </div>
+      <div class="axis main-axis blue-axis">
+        <div class="axis perpendicular-axis blue-axis"></div>
       </div>
     </div>
   </div>
-
   <!-- Controls -->
   <div class="controls">
     <div class="zoom">
-      <button data-zoom="out" class="input-zoom">-</button>
-      <button data-zoom="in" class="input-zoom">+</button>
+      <input class="input-zoom" type="range" min="-800" max="800" value="800">
     </div>
-    <label class="switch">
-      <span class="label">grid</span>
-      <input type="checkbox" class="input-show-grid">
-      <span class="slider round"></span>
-    </label>
-    <label class="switch">
-      <span class="label">borders</span>
-      <input type="checkbox" class="input-cube-border">
-      <span class="slider round"></span>
-    </label>
+    <img class="input-show-borders" src="images/cube.svg">
+    <img class="input-show-grid" src="images/globe.svg">
   </div>
   <script src="scripts/controls.js"></script>
   <script src="scripts/rotate.js"></script>
