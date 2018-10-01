@@ -1,6 +1,5 @@
 var dragArea = document.querySelector('.drag-area')
-var axes = document.querySelector('.axes')
-var objectContainer = document.querySelector('.rotate')
+var rotationContainers = document.querySelectorAll('.rotate')
 var rotation = {
   x: 45,
   y: 0,
@@ -51,8 +50,9 @@ var applyRotatiton = function() {
     rotation.z +
     'deg)'
 
-  objectContainer.style.transform = rotate
-  axes.style.transform = rotate
+  rotationContainers.forEach(function(container) {
+    container.style.transform = rotate
+  })
 }
 
 document.onload = applyRotatiton()

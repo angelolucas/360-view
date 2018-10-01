@@ -8,17 +8,17 @@ var select = {
   },
 }
 
-// Zoom Range
+// Range Zoom
 select.input.zoom.oninput = function() {
   select.camera.style.transform = 'translateZ(' + this.value + 'px)'
 }
 
 // Toggle Show Grid
 select.input.showGrid.onclick = function() {
-  select.cube.classList.toggle('show-grid')
+  select.cube.classList.toggle('grid')
 }
 
 // Toogle Cube Borders
 select.input.showBorders.onclick = function() {
-  select.cube.classList.toggle('show-border')
+  select.cube.classList.toggle('borders')
 }

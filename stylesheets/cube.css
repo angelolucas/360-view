@@ -7,7 +7,7 @@
   left: 50%;
 }
 
-.cube.show-border .side {
+.cube.borders .side {
   box-shadow: inset 0 0 0px 1px black;
 }
 
@@ -24,7 +24,7 @@
   transform: translateX(99.9%) rotateY(-90deg);
 }
 
-.cube.show-grid .side {
+.cube.grid .side {
   background-image: url('../images/grid.jpg'), url('../images/environment.jpg');
   background-blend-mode: lighten;
 }
