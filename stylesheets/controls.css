@@ -32,3 +32,16 @@
   width: auto;
   padding: 10px;
 }
+
+.input-show-borders,
+.input-show-grid,
+.zoom input {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.input-show-borders:hover,
+.input-show-grid:hover,
+.zoom input:hover {
+  opacity: 1;
+}
