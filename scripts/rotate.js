@@ -1,10 +1,10 @@
-var dragArea = document.querySelector('.app')
+var dragArea = document.querySelector('.dragging-area')
 var axes = document.querySelector('.axes')
 var objectContainer = document.querySelector('.rotate')
 var rotation = {
-  x: 0,
+  x: 45,
   y: 0,
-  z: 0,
+  z: 225,
 }
 
 dragArea.onmousedown = function(e) {

@@ -25,6 +25,10 @@
   transform: rotateX(90deg) translateY(-50%);
 }
 
+.perpendicular-axis {
+  transform: rotateY(90deg);
+}
+
 .red-axis {
   background-image: linear-gradient(
     transparent,
@@ -50,8 +54,4 @@
     blue 50%,
     transparent
   );
-}
-
-.perpendicular-axis {
-  transform: rotateY(90deg);
 }
