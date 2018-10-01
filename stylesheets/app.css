@@ -26,10 +26,10 @@ body {
   transform: translateZ(800px);
 }
 
-.dragging-area {
+.drag-area {
   cursor: -webkit-grab;
 }
 
-.dragging-area:active {
+.drag-area:active {
   cursor: -webkit-grabbing;
 }

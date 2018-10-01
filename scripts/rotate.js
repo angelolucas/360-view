@@ -1,4 +1,4 @@
-var dragArea = document.querySelector('.dragging-area')
+var dragArea = document.querySelector('.drag-area')
 var axes = document.querySelector('.axes')
 var objectContainer = document.querySelector('.rotate')
 var rotation = {
