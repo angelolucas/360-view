@@ -1,6 +1,6 @@
 # 360˚ View
 
-Made With Vanilla CSS and Javascript.
+Made With Vanilla CSS and JavaScript.
 
 https://angelolucas.github.io/360-view
 
